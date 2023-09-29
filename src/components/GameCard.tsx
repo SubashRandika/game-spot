@@ -1,9 +1,9 @@
-import { Card, CardBody, HStack, Heading, Image, Text } from "@chakra-ui/react";
-
 import CriticScore from "./CriticScore";
-import { Game } from "../hooks/useGames";
-import PlatformIconList from "./PlatformIconList";
+import Emoji from "./Emoji";
 import getCroppedImageUrl from "../services/image-url";
+import PlatformIconList from "./PlatformIconList";
+import { Card, CardBody, Flex, Heading, HStack, Image } from "@chakra-ui/react";
+import { Game } from "../hooks/useGames";
 
 interface Props {
   game: Game;
@@ -20,9 +20,12 @@ const GameCard = ({ game }: Props) => {
           />
           <CriticScore score={game.metacritic} />
         </HStack>
-        <Heading size={{ sm: "lg", md: "md", lg: "md", xl: "md" }}>
-          {game.name}
-        </Heading>
+        <Flex alignItems="center">
+          <Heading size={{ sm: "lg", md: "md", lg: "md", xl: "md" }}>
+            {game.name}
+          </Heading>
+          <Emoji rating={game.rating_top} />
+        </Flex>
       </CardBody>
     </Card>
   );
