@@ -12,7 +12,7 @@ Games application developed using React JS version 18
 
 ### `npm run dev`
 
-Runs front-end application in the development mode.<br />
+Runs front-end application in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Live Preview in Vercel (GameSpot)
