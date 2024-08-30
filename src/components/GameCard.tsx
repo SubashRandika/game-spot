@@ -4,6 +4,7 @@ import getCroppedImageUrl from "../services/image-url";
 import PlatformIconList from "./PlatformIconList";
 import { Card, CardBody, Flex, Heading, HStack, Image } from "@chakra-ui/react";
 import { Game } from "../hooks/useGames";
+import { Link } from "react-router-dom";
 
 interface Props {
   game: Game;
@@ -22,7 +23,7 @@ const GameCard = ({ game }: Props) => {
         </HStack>
         <Flex alignItems="center">
           <Heading size={{ sm: "lg", md: "md", lg: "md", xl: "md" }}>
-            {game.name}
+            <Link to={`/games/${game.slug}`}>{game.name}</Link>
           </Heading>
           <Emoji rating={game.rating_top} />
         </Flex>
