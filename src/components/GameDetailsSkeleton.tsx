@@ -25,7 +25,12 @@ const GameDetailsSkeleton = () => {
           <SkeletonText noOfLines={3} width="50%" />
         </Box>
       </SimpleGrid>
-      <Skeleton width="50%" height="300px" />
+      <SimpleGrid columns={2} gap={2} width="50%">
+        <Skeleton height="140px" />
+        <Skeleton height="140px" />
+        <Skeleton height="140px" />
+        <Skeleton height="140px" />
+      </SimpleGrid>
     </Stack>
   );
 };
