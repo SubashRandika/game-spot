@@ -21,7 +21,7 @@ const GameTrailers = ({ gameId }: Props) => {
   const first = data?.results[0];
 
   return first ? (
-    <AspectRatio ratio={16 / 9}>
+    <AspectRatio ratio={16 / 9} marginBottom={2}>
       <video controls src={first.data?.[480]} poster={first.preview} />
     </AspectRatio>
   ) : null;
